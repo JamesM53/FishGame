@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://be3rsm0rsbtta"]
+
+[ext_resource type="Script" uid="uid://lp58mrjk3ufr" path="res://Scripts/area_select.gd" id="1_fuwry"]
+[ext_resource type="Texture2D" uid="uid://dwgi3rdqbd2nr" path="res://Textures/gftjxq1av6u41.jpg" id="2_n4os0"]
+[ext_resource type="Texture2D" uid="uid://bq18niiprhsgr" path="res://Textures/boat.png" id="3_d8y6v"]
+
+[node name="AreaSelect" type="Node2D" unique_id=1785213338]
+script = ExtResource("1_fuwry")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1226743539]
+texture_filter = 2
+position = Vector2(565.37506, 240)
+scale = Vector2(0.46110004, 0.358)
+texture = ExtResource("2_n4os0")
+
+[node name="Button" type="Button" parent="." unique_id=388406109]
+offset_left = 427.0
+offset_top = 222.0
+offset_right = 580.0
+offset_bottom = 286.0
+tooltip_text = "Travel to the lake"
+text = "Lake"
+icon = ExtResource("3_d8y6v")
+flat = true
+
+[node name="Button2" type="Button" parent="." unique_id=733851217]
+offset_left = 19.0
+offset_top = 13.0
+offset_right = 214.0
+offset_bottom = 72.0
+text = "Quit"
+
+[node name="Button3" type="Button" parent="." unique_id=644986085]
+offset_left = 585.0
+offset_top = 448.0
+offset_right = 702.0
+offset_bottom = 528.0
+tooltip_text = "Travel to the Ocean"
+text = "Ocean"
+icon = ExtResource("3_d8y6v")
+flat = true
+
+[node name="Button4" type="Button" parent="." unique_id=412178876]
+offset_left = 790.0
+offset_top = 179.0
+offset_right = 973.0
+offset_bottom = 265.0
+tooltip_text = "Travel to the town, to buy and sell"
+text = "Town"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_button_3_pressed"]

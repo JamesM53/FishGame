@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cql6tuwgq840c"]
+
+[ext_resource type="Script" uid="uid://c44k8xumo4mbi" path="res://Scripts/hook.gd" id="1_n13h4"]
+[ext_resource type="Texture2D" uid="uid://c7mkeix4d7xn3" path="res://Textures/bait.png" id="2_xfyhh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pwo4a"]
+size = Vector2(4, 4)
+
+[node name="hook" type="Area2D" unique_id=273103799]
+collision_layer = 2
+script = ExtResource("1_n13h4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=723346821]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_pwo4a")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=223867465]
+texture_filter = 1
+texture = ExtResource("2_xfyhh")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

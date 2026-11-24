@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://d3chna1yafkok"]
+
+[ext_resource type="Texture2D" uid="uid://bq18niiprhsgr" path="res://Textures/boat.png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://dmfi6l8c1icit" path="res://Scripts/player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://diarngn54ymhn" path="res://Textures/rod.png" id="3_i3pqv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
+size = Vector2(21, 9)
+
+[node name="Player" type="CharacterBody2D" unique_id=359343795]
+script = ExtResource("1_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=425751456]
+texture_filter = 1
+position = Vector2(-17, 11)
+texture = ExtResource("1_4flbx")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D" unique_id=2122210465]
+texture_filter = 1
+position = Vector2(13, -3.999999)
+scale = Vector2(0.4375, 0.47916666)
+texture = ExtResource("3_i3pqv")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=82586247]
+zoom = Vector2(3, 3)
+
+[node name="FishingLine" type="Line2D" parent="." unique_id=733350139]
+width = 0.5
+default_color = Color(0.66, 0.66, 0.66, 1)
+
+[node name="BiomeDetector" type="Area2D" parent="." unique_id=1309959021]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BiomeDetector" unique_id=938541751]
+position = Vector2(-18, 15)
+shape = SubResource("RectangleShape2D_onrkg")
+
+[node name="Statuslbl" type="Label" parent="." unique_id=26310584]
+offset_top = -47.0
+offset_right = 40.0
+offset_bottom = -24.0
+
+[node name="Fishlbl" type="Label" parent="." unique_id=310489872]
+offset_left = 18.0
+offset_top = -35.0
+offset_right = 58.0
+offset_bottom = -12.0
